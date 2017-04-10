@@ -16,7 +16,7 @@ import { FormControl } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import { Checkbox } from 'react-bootstrap';
 
-class IncrementComponent extends Component {
+class SettingsComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
@@ -64,39 +64,7 @@ class IncrementComponent extends Component {
         <NavItem eventKey={2} href="#">End Session</NavItem>
       </Nav>
   </Navbar>
-            <div>
-                <div className="infobar">
-                    <span className="inforight">some info</span>
-                    <span className="infoleft">some info</span>
-                </div>
-                <Well bsSize="large">
-                    <div className="scroll">
-                        <div className="message">How may I help you?</div>
-                        <div className="message">I have a question about Cingo.</div>
-                        <div className="message">Sure. What is your question?</div>
-                        <div className="message">Why is Cingo so awesome?</div>
-                        <div className="message">This is a chat message.</div>
-                        <div className="message">This is a reply.</div>
-                        <div className="message">Yes.</div>
-                        <div className="message">No.</div>
-                    </div>
-                    <Form horizontal>
-    <FormGroup controlId="formHorizontalEmail">
-      <Col componentClass={ControlLabel} sm={2}>
-        Chat with Cingo
-      </Col>
-      <Col sm={10}>
-        <FormControl type="input" placeholder="Input message" />
-      </Col>
-    </FormGroup>
-
-
-
-
-  </Form>
-                    <div className="brand">Powered by Cingo</div>
-                </Well>
-            </div>
+            <div>Hi this is a settings page.</div>
 
             </div>
     );
@@ -113,4 +81,4 @@ const mapDispatchToProps = (dispatch) => ({
   basicActions : bindActionCreators(basicActionCreators, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(IncrementComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsComponent);
