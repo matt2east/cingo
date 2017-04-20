@@ -16,8 +16,10 @@ import { FormControl } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import { Checkbox } from 'react-bootstrap';
 
+
+
 class IncrementComponent extends Component {
-  constructor(props) {
+    /*constructor(props) 
     super(props);
     this.state = {isToggleOn: true};
 
@@ -31,7 +33,29 @@ class IncrementComponent extends Component {
     } else {
       this.props.basicActions.openButton()
     }
+  }*/
+    
+constructor(props) {
+    super(props);
+     this.state = {message: '',
+                  addclass: null};
+   
+    
+    
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleSubmit(event) {
+      var chat = this.input.value;
+      this.state = chat;
+      alert(this.state);
+    event.preventDefault();
+      this.setState({message: chat,
+                    addclass: 'message'})
+  }
+   
+    
+
 
   render() {
     return (
@@ -39,8 +63,8 @@ class IncrementComponent extends Component {
             {/*<Button onClick={this.handleClick} active={this.state.isToggleOn} bsStyle="warning">
         {this.props.basic.isOpen ? 'Open' : 'Closed'}
       </Button>*/}
-
-  <Navbar>
+         
+            {/*<Navbar>
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#">Cingo</a>
@@ -49,24 +73,18 @@ class IncrementComponent extends Component {
     <Nav>
       <NavItem eventKey={1} href="#">Requests</NavItem>
       <NavItem eventKey={2} href="#">Companies</NavItem>
-        <NavItem eventKey={2} href="settings">Settings</NavItem>
-
-        {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey={3.4}>Separated link</MenuItem>
-      </NavDropdown>*/}
+        <NavItem eventKey={2} href="#">Settings</NavItem>
     </Nav>
          <Nav pullRight>
         <NavItem eventKey={1} href="#">User Details</NavItem>
         <NavItem eventKey={2} href="#">End Session</NavItem>
       </Nav>
-  </Navbar>
+  </Navbar>*/}
             <div>
                 <div className="infobar">
-                    <span className="inforight">some info</span>
+                    <span className="inforight">icon
+                        {/*<i class="fa fa-microphone-slash" aria-hidden="true"></i>*/}
+                    </span>
                     <span className="infoleft">some info</span>
                 </div>
                 <Well bsSize="large">
@@ -77,28 +95,27 @@ class IncrementComponent extends Component {
                         <div className="message">Why is Cingo so awesome?</div>
                         <div className="message">This is a chat message.</div>
                         <div className="message">This is a reply.</div>
-                        <div className="message">Yes.</div>
-                        <div className="message">No.</div>
+                        <div className={this.state.addclass}>{this.state.message}</div>
+                    
+   
                     </div>
-                    <Form horizontal>
-    <FormGroup controlId="formHorizontalEmail">
-      <Col componentClass={ControlLabel} sm={2}>
+                     <Form horizontal onSubmit={this.handleSubmit}>
+                         <FormGroup controlId="formHorizontalEmail">
+                            <Col componentClass={ControlLabel} sm={2}>
         Chat with Cingo
-      </Col>
-      <Col sm={10}>
-        <FormControl type="input" placeholder="Input message" />
-      </Col>
-    </FormGroup>
-
-
-
-
-  </Form>
+                            </Col>
+                            <Col sm={10}>
+                              
+                                <input type="input" placeholder="say something" ref={(input) => this.input = input}>
+                                    
+                               
+                                </input>
+          </Col>
+                        </FormGroup></Form>
                     <div className="brand">Powered by Cingo</div>
                 </Well>
             </div>
-
-            </div>
+ </div>
     );
   }
 }

@@ -16,22 +16,11 @@ import { FormControl } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import { Checkbox } from 'react-bootstrap';
 
-class SettingsComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {isToggleOn: true};
 
-    // This binding is necessary to make 'this' work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
 
-  handleClick() {
-    if (this.props.basic.isOpen) {
-      this.props.basicActions.closeButton()
-    } else {
-      this.props.basicActions.openButton()
-    }
-  }
+class TopbarComponent extends Component {
+  
+  
 
   render() {
     return (
@@ -39,8 +28,8 @@ class SettingsComponent extends Component {
             {/*<Button onClick={this.handleClick} active={this.state.isToggleOn} bsStyle="warning">
         {this.props.basic.isOpen ? 'Open' : 'Closed'}
       </Button>*/}
-
-  <Navbar>
+         
+            <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#">Cingo</a>
@@ -49,23 +38,15 @@ class SettingsComponent extends Component {
     <Nav>
       <NavItem eventKey={1} href="#">Requests</NavItem>
       <NavItem eventKey={2} href="#">Companies</NavItem>
-        <NavItem eventKey={2} href="settings">Settings</NavItem>
-
-        {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey={3.4}>Separated link</MenuItem>
-      </NavDropdown>*/}
+        <NavItem eventKey={2} href="#">Settings</NavItem>
     </Nav>
          <Nav pullRight>
         <NavItem eventKey={1} href="#">User Details</NavItem>
         <NavItem eventKey={2} href="#">End Session</NavItem>
       </Nav>
   </Navbar>
-            <div>Hi this is a settings page.</div>
-
+           
+ 
             </div>
     );
   }
@@ -81,4 +62,4 @@ const mapDispatchToProps = (dispatch) => ({
   basicActions : bindActionCreators(basicActionCreators, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SettingsComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(TopbarComponent);
