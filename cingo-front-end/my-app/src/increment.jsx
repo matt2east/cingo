@@ -50,7 +50,7 @@ constructor(props) {
       this.state = chat;
     event.preventDefault();
       this.setState({message: chat,
-                    addclass: 'message'})
+                    addclass: 'arrow_box'})
   }
    
     
@@ -95,12 +95,12 @@ constructor(props) {
                 </div>
                 <Well bsSize="large">
                     <div className="scroll">
-                        <div className="message">How may I help you?</div>
-                        <div className="message">I have a question about Cingo.</div>
-                        <div className="message">Sure. What is your question?</div>
-                        <div className="message">Why is Cingo so awesome?</div>
-                        <div className="message">This is a chat message.</div>
-                        <div className="message">This is a reply.</div>
+                        <div className="arrow_box">How may I help you?</div>
+                        <div className="arrow_box">I have a question about Cingo.</div>
+                        <div className="arrow_box">Sure. What is your question?</div>
+                        <div className="arrow_box">Why is Cingo so awesome?</div>
+                        <div className="arrow_box">This is a chat message.</div>
+                        <div className="arrow_box">This is a reply.</div>
                         <div className={this.state.addclass}>{this.state.message}</div>
                     
    
