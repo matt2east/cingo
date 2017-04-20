@@ -58,14 +58,24 @@
     font-size: 20px;
 }
 .infoleft{
-    margin-left:25%;
+    margin-left:10%;
     color:blue;
 }
-.inforight{
-    margin-right:25%;
-    color:red;
-  
+.moreleft{
+    margin-left:15%;
+    color:blue;
 }
+
+.inforight{
+    margin-right:10%;
+    color:red;
+}
+    
+.moreright{
+    margin-right:15%;
+    color:red;      
+}
+
 .newmessage{
     color:red;
 }

@@ -48,7 +48,6 @@ constructor(props) {
   handleSubmit(event) {
       var chat = this.input.value;
       this.state = chat;
-      alert(this.state);
     event.preventDefault();
       this.setState({message: chat,
                     addclass: 'message'})
@@ -83,9 +82,16 @@ constructor(props) {
             <div>
                 <div className="infobar">
                     <span className="inforight">icon
-                        {/*<i class="fa fa-microphone-slash" aria-hidden="true"></i>*/}
                     </span>
-                    <span className="infoleft">some info</span>
+                    <span className="moreright">swag</span>
+                    <span className="infoleft">info</span>
+                    <span className="moreleft">test</span>
+                    <br></br>
+                      <span className="inforight">icon
+                    </span>
+                    <span className="moreright">swag</span>
+                    <span className="infoleft">info</span>
+                     <span className="moreleft">test</span>
                 </div>
                 <Well bsSize="large">
                     <div className="scroll">
