@@ -112,10 +112,10 @@ constructor(props) {
                             </Col>
                             <Col sm={10}>
                               
-                                <input type="input" placeholder="say something" ref={(input) => this.input = input}>
+                                <FormControl type="input" placeholder="say something" inputRef={(ref) => {this.input = ref}}>
                                     
                                
-                                </input>
+                                </FormControl>
           </Col>
                         </FormGroup></Form>
                     <div className="brand">Powered by Cingo</div>
