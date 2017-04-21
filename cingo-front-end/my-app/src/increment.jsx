@@ -50,7 +50,7 @@ constructor(props) {
       this.state = chat;
     event.preventDefault();
       this.setState({message: chat,
-                    addclass: 'arrow_box'})
+                    addclass: 'arrow_box'});
   }
    
     
