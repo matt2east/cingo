@@ -59,7 +59,9 @@
     color:red;      
 }
 
-
+.arrow_box{
+    margin: 10px;
+}
 
 .arrow_box:nth-child(odd) {
 
