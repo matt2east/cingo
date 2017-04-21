@@ -23,35 +23,14 @@
   to { transform: rotate(360deg); }
 }
 
-.scroll{
-    overflow:scroll;
+.chatbox{
+    overflow-x:scroll;
     height: 400px;
+    padding-left:14px;
+    padding-right:14px;
 }
 
-/*
-.message:nth-child(odd){
-    overflow:scroll;
-    margin-right:100px;
-    margin-bottom: 10px;
-    background-color: aquamarine;
-    text-align: right;
-    border-style: groove;
-    border: 2px solid aquamarine;
-    border-radius: 5px;
-    padding:20px;
-}
-.message:nth-child(even){
-    overflow:scroll;
-    margin-left:100px;
-     margin-bottom: 10px;
-    background-color:bisque;
-    text-align: left;
-    border-style: groove;
-    border: 2px solid bisque;
-    border-radius: 5px;
-    padding:20px;
-}
-*/
+
 
 .brand{
     text-align:right;
@@ -78,22 +57,18 @@
     color:red;      
 }
 
-.newmessage{
-    color:red;
-}
+
 
 .arrow_box:nth-child(odd) {
-/*    overflow:scroll;*/
+
     margin-right:100px;
     text-align: right;
     padding:20px;
 	position: relative;
 	background: aquamarine;
-/*	border: 4px solid aquamarine;*/
-/*    border-bottom: 10px;*/
+
 }
 .arrow_box:nth-child(odd):nth-child(odd):after, .arrow_box:before {
-/*    overflow:scroll;*/
 	left: 100%;
 	top: 50%;
 	border: solid transparent;
@@ -102,38 +77,33 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-/*    border-bottom: 10px;*/
+
 }
 
 .arrow_box:nth-child(odd):after {
-/*    overflow:scroll;*/
-/*	border-color: rgba(136, 183, 213, 0);*/
 	border-left-color: aquamarine;
 	border-width: 30px;
 	margin-top: -30px;
-/*    border-bottom: 10px;*/
+
 }
 .arrow_box:nth-child(odd):before {
-/*    overflow:scroll;*/
-/*	border-color: rgba(194, 225, 245, 0);*/
+
 	border-left-color: aquamarine;
 	border-width: 30px;
 	margin-top: -30px;
-/*    border-bottom: 10px;*/
+
 }
 
 
  .arrow_box:nth-child(even) {
-/*     overflow:scroll;*/
     margin-left:100px;
     text-align: left;
     padding: 20px; 
 	position: relative;
 	background: bisque;
-/*	border: 4px solid bisque;*/
+
 }
 .arrow_box:nth-child(even):after, .arrow_box:before {
-/*    overflow:scroll;*/
 	right: 100%;
 	top: 50%;
 	border: solid transparent;
@@ -145,15 +115,12 @@
 }
 
 .arrow_box:nth-child(even):after {
-/*    overflow:scroll;*/
-/*	border-color: rgba(136, 183, 213, 0);*/
 	border-right-color: bisque;
 	border-width: 30px;
 	margin-top: -30px;
 }
 .arrow_box:nth-child(even):before {
-/*    overflow:scroll;*/
-/*	border-color: rgba(194, 225, 245, 0);*/
+
 	border-right-color: bisque;
 	border-width: 30px;
 	margin-top: -30px;

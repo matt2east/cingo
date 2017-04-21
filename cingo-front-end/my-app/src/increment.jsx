@@ -94,12 +94,16 @@ constructor(props) {
                      <span className="moreleft">test</span>
                 </div>
                 <Well bsSize="large">
-                    <div className="scroll">
+                    <div className="chatbox">
                         <div className="arrow_box">How may I help you?</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
                         <div className="arrow_box">Sure. What is your question?</div>
                         <div className="arrow_box">Why is Cingo so awesome?</div>
                         <div className="arrow_box">This is a chat message.</div>
+                        <div className="arrow_box">This is a reply.</div>
+                           <div className="arrow_box">This is a chat message.</div>
+                        <div className="arrow_box">This is a reply.</div>
+                           <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
                         <div className={this.state.addclass}>{this.state.message}</div>
                     
