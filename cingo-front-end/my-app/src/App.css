@@ -26,11 +26,12 @@
 .chatbox{
     overflow-x:scroll;
     height: 400px;
-    padding-left:14px;
-    padding-right:14px;
+    padding-left:15px;
+    padding-right:15px;
+    
 }
 
-
+#surround{padding:20px}
 
 .brand{
     text-align:right;

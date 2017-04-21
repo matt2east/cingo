@@ -35,15 +35,17 @@ class TopbarComponent extends Component {
         <a href="#">Cingo</a>
       </Navbar.Brand>
     </Navbar.Header>
-    <Nav>
-      <NavItem eventKey={1} href="#">Requests</NavItem>
-      <NavItem eventKey={2} href="#">Companies</NavItem>
-        <NavItem eventKey={2} href="#">Settings</NavItem>
-    </Nav>
-         <Nav pullRight>
-        <NavItem eventKey={1} href="#">User Details</NavItem>
-        <NavItem eventKey={2} href="#">End Session</NavItem>
-      </Nav>
+                <Navbar.Collapse>    
+                    <Nav>
+                        <NavItem eventKey={1} href="#">Requests</NavItem>
+                        <NavItem eventKey={2} href="#">Companies</NavItem>
+                        <NavItem eventKey={2} href="#">Settings</NavItem>
+                    </Nav>
+                    <Nav pullRight>
+                        <NavItem eventKey={1} href="#">User Details</NavItem>
+                        <NavItem eventKey={2} href="#">End Session</NavItem>
+                    </Nav>
+                </Navbar.Collapse>
   </Navbar>
            
  

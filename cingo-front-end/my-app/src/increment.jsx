@@ -79,7 +79,7 @@ constructor(props) {
         <NavItem eventKey={2} href="#">End Session</NavItem>
       </Nav>
   </Navbar>*/}
-            <div>
+            <div id="surround">
                 <div className="infobar">
                     <span className="inforight">icon
                     </span>
@@ -93,7 +93,9 @@ constructor(props) {
                     <span className="infoleft">info</span>
                      <span className="moreleft">test</span>
                 </div>
-                <Well bsSize="large">
+                
+                <Well bsSize="large" id="well">
+                  
                     <div className="chatbox">
                         <div className="arrow_box">How may I help you?</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
@@ -109,12 +111,15 @@ constructor(props) {
                     
    
                     </div>
+                </Well>
+                    
+                    
                      <Form horizontal onSubmit={this.handleSubmit}>
                          <FormGroup controlId="formHorizontalEmail">
-                            <Col componentClass={ControlLabel} sm={2}>
+                            <Col componentClass={ControlLabel} sm={1}>
         Chat with Cingo
                             </Col>
-                            <Col sm={10}>
+                            <Col sm={11}>
                               
                                 <FormControl type="input" placeholder="say something" inputRef={(ref) => {this.input = ref}}>
                                     
@@ -123,7 +128,7 @@ constructor(props) {
           </Col>
                         </FormGroup></Form>
                     <div className="brand">Powered by Cingo</div>
-                </Well>
+               
             </div>
  </div>
     );
