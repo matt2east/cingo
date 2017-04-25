@@ -35,14 +35,16 @@ class IncrementComponent extends Component {
     }
   }*/
     
+
+    
 constructor(props) {
     super(props);
+    var array = ["test"]
+   
      this.state = {message: '',
                   addclass: null};
-   
-    
-    
     this.handleSubmit = this.handleSubmit.bind(this);
+    
   }
 
   handleSubmit(event) {
@@ -51,7 +53,13 @@ constructor(props) {
     event.preventDefault();
       this.setState({message: chat,
                     addclass: 'arrow_box'});
+
   }
+    
+    function(){
+        var messages = ["this is a message","this is also a message"];
+    }
+
    
     
 
@@ -97,7 +105,8 @@ constructor(props) {
                 <Well bsSize="large" id="well">
                   
                     <div className="chatbox">
-                        <div className="arrow_box">How may I help you?</div>
+                       
+                        <div className="arrow_box">{messages[1]}</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
                         <div className="arrow_box">Sure. What is your question?</div>
                         <div className="arrow_box">Why is Cingo so awesome?</div>
