@@ -39,33 +39,21 @@ class IncrementComponent extends Component {
     
 constructor(props) {
     super(props);
-    this.state = {message: [],
+    this.state = {message: ["test"],
                   addclass: null
                  };
+    alert(this.state.message)
     this.handleSubmit = this.handleSubmit.bind(this);
 }
     handleSubmit(event) {
-        var chat = this.input.value;
+        var chat = [this.input.value];
         this.state = chat;
         event.preventDefault();
-        /*this.setState({message: chat,
-        addclass: 'arrow_box'});*/
-        this.setState((state) => ({message: state.message.concat(chat)}, {addclass:'arrow_box'}));
-        /*trying 2 different syntaxes, see above and below commented out*/
-        /*this.setState(function(state) {
-            return {list: state.message.concat(chat)
-                   }
-        })*/
-        alert(this.state.message)
-        /*undefined*/
-        alert(this.state.addclass)
-        /*undefined*/
-    }
-
-
-   
-    
-
+        this.setState({ 
+            message: this.state.message.concat(chat)
+        })
+        alert("the concatenated array is" +this.state.message)
+    };
 
   render() {
     return (
