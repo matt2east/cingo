@@ -50,11 +50,18 @@ constructor(props) {
         event.preventDefault();
         /*this.setState({message: chat,
         addclass: 'arrow_box'});*/
-        this.setState({ message: this.state.message.concat(chat) },
-                      {addclass: 'arrow_box'});
+        this.setState((state) => ({message: state.message.concat(chat)}, {addclass:'arrow_box'}));
+        /*trying 2 different syntaxes, see above and below commented out*/
+        /*this.setState(function(state) {
+            return {list: state.message.concat(chat)
+                   }
+        })*/
+        alert(this.state.message)
+        /*undefined*/
+        alert(this.state.addclass)
+        /*undefined*/
     }
-    
-    
+
 
    
     
