@@ -42,7 +42,7 @@ constructor(props) {
     this.state = {message: ["test"],
                   addclass: null
                  };
-    alert(this.state.message)
+    
     this.handleSubmit = this.handleSubmit.bind(this);
 }
     handleSubmit(event) {
@@ -53,6 +53,7 @@ constructor(props) {
             message: this.state.message.concat(chat)
         })
         alert("the concatenated array is" +this.state.message)
+        /*not firing*/
     };
 
   render() {
