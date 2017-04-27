@@ -39,26 +39,22 @@ class IncrementComponent extends Component {
     
 constructor(props) {
     super(props);
-    var array = ["test"]
-   
-     this.state = {message: '',
-                  addclass: null};
+    this.state = {message: [],
+                  addclass: null
+                 };
     this.handleSubmit = this.handleSubmit.bind(this);
-    
-  }
-
-  handleSubmit(event) {
-      var chat = this.input.value;
-      this.state = chat;
-    event.preventDefault();
-      this.setState({message: chat,
-                    addclass: 'arrow_box'});
-
-  }
-    
-    function(){
-        var messages = ["this is a message","this is also a message"];
+}
+    handleSubmit(event) {
+        var chat = this.input.value;
+        this.state = chat;
+        event.preventDefault();
+        /*this.setState({message: chat,
+        addclass: 'arrow_box'});*/
+        this.state.message.push(chat);
+        alert.log(this.setState.message)
     }
+    
+    
 
    
     
@@ -89,52 +85,47 @@ constructor(props) {
   </Navbar>*/}
             <div id="surround">
                 <div className="infobar">
-                    <span className="inforight">icon
-                    </span>
+                    <span className="inforight">icon</span>
                     <span className="moreright">swag</span>
                     <span className="infoleft">info</span>
                     <span className="moreleft">test</span>
                     <br></br>
-                      <span className="inforight">icon
-                    </span>
+                    <span className="inforight">icon</span>
                     <span className="moreright">swag</span>
                     <span className="infoleft">info</span>
-                     <span className="moreleft">test</span>
+                    <span className="moreleft">test</span>
                 </div>
                 
                 <Well bsSize="large" id="well">
                   
                     <div className="chatbox">
                        
-                        <div className="arrow_box">{messages[1]}</div>
+                        <div className="arrow_box">yo</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
                         <div className="arrow_box">Sure. What is your question?</div>
                         <div className="arrow_box">Why is Cingo so awesome?</div>
                         <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
-                           <div className="arrow_box">This is a chat message.</div>
+                        <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
-                           <div className="arrow_box">This is a chat message.</div>
+                        <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
                         <div className={this.state.addclass}>{this.state.message}</div>
-                    
-   
                     </div>
                 </Well>
                     
                     
                      <Form horizontal onSubmit={this.handleSubmit}>
                          <FormGroup controlId="formHorizontalEmail">
-                            <Col componentClass={ControlLabel} sm={1}>
-        Chat with Cingo
-                            </Col>
-                            <Col sm={11}>
-                              
-                                <FormControl type="input" placeholder="say something" inputRef={(ref) => {this.input = ref}}>
+                             <Col componentClass={ControlLabel} sm={1}>
+                                 Chat with Cingo
+                             </Col>
+                             <Col sm={11}>
+                                 <FormControl type="input" placeholder="say something" inputRef={(ref) => {this.input = ref}}>
                                     
                                
                                 </FormControl>
-          </Col>
+                             </Col>
                         </FormGroup></Form>
                     <div className="brand">Powered by Cingo</div>
                
