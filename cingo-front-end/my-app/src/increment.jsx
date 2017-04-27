@@ -18,28 +18,10 @@ import { Checkbox } from 'react-bootstrap';
 
 
 
-class IncrementComponent extends Component {
-    /*constructor(props) 
-    super(props);
-    this.state = {isToggleOn: true};
-
-    // This binding is necessary to make 'this' work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    if (this.props.basic.isOpen) {
-      this.props.basicActions.closeButton()
-    } else {
-      this.props.basicActions.openButton()
-    }
-  }*/
-    
-
-    
+class IncrementComponent extends Component {    
 constructor(props) {
     super(props);
-    this.state = {message: ["test"],
+    this.state = {message: [""],
                   addclass: null
                  };
     
@@ -47,38 +29,17 @@ constructor(props) {
 }
     handleSubmit(event) {
         var chat = [this.input.value];
-        this.state = chat;
         event.preventDefault();
         this.setState({ 
-            message: this.state.message.concat(chat)
+            message: this.state.message.concat(chat),
+            addclass: "arrow_box"
         })
-        alert("the concatenated array is" +this.state.message)
-        /*not firing*/
+
     };
 
   render() {
     return (
         <div>
-            {/*<Button onClick={this.handleClick} active={this.state.isToggleOn} bsStyle="warning">
-        {this.props.basic.isOpen ? 'Open' : 'Closed'}
-      </Button>*/}
-         
-            {/*<Navbar>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <a href="#">Cingo</a>
-      </Navbar.Brand>
-    </Navbar.Header>
-    <Nav>
-      <NavItem eventKey={1} href="#">Requests</NavItem>
-      <NavItem eventKey={2} href="#">Companies</NavItem>
-        <NavItem eventKey={2} href="#">Settings</NavItem>
-    </Nav>
-         <Nav pullRight>
-        <NavItem eventKey={1} href="#">User Details</NavItem>
-        <NavItem eventKey={2} href="#">End Session</NavItem>
-      </Nav>
-  </Navbar>*/}
             <div id="surround">
                 <div className="infobar">
                     <span className="inforight">icon</span>
