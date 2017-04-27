@@ -50,8 +50,8 @@ constructor(props) {
         event.preventDefault();
         /*this.setState({message: chat,
         addclass: 'arrow_box'});*/
-        this.state.message.push(chat);
-        alert.log(this.setState.message)
+        this.setState({ message: this.state.message.concat(chat) },
+                      {addclass: 'arrow_box'});
     }
     
     
