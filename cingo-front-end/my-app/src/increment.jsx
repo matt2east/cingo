@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as basicActionCreators from './actions/basic';
@@ -22,18 +23,25 @@ class IncrementComponent extends Component {
 constructor(props) {
     super(props);
     this.state = {message: [""],
-                  addclass: null
+                  addclass: null,
+                  
                  };
+   
     
     this.handleSubmit = this.handleSubmit.bind(this);
 }
     handleSubmit(event) {
         var chat = [this.input.value];
+        
+        
         event.preventDefault();
         this.setState({ 
             message: this.state.message.concat(chat),
-            addclass: "arrow_box"
+            addclass: "arrow_box",
+            
         })
+    
+        alert(ReactDOM.findDOMNode(this.formControlRef))   
 
     };
 
@@ -78,7 +86,7 @@ constructor(props) {
                                  Chat with Cingo
                              </Col>
                              <Col sm={11}>
-                                 <FormControl type="input" placeholder="say something" inputRef={(ref) => {this.input = ref}}>
+                                 <FormControl type="input" ref={(c)=>this.formControlRef=c} placeholder="say something" inputRef={(ref) => {this.input = ref}}>
                                     
                                
                                 </FormControl>
