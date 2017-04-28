@@ -41,7 +41,7 @@ constructor(props) {
             
         })
     
-        alert(ReactDOM.findDOMNode(this.formControlRef))   
+        alert(ReactDOM.findDOMNode(this.formControlRef.value))   
 
     };
 
@@ -86,7 +86,7 @@ constructor(props) {
                                  Chat with Cingo
                              </Col>
                              <Col sm={11}>
-                                 <FormControl type="input" ref={(c)=>this.formControlRef=c} placeholder="say something" inputRef={(ref) => {this.input = ref}}>
+                                 <FormControl type="text" ref={(c)=>this.formControlRef=c} placeholder="say something" inputRef={(ref) => {this.input = ref}}>
                                     
                                
                                 </FormControl>
