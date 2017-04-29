@@ -61,6 +61,7 @@
 
 .arrow_box{
     margin: 10px;
+/*    box-shadow:2px 2px 2px #888888;*/
 }
 
 .arrow_box:nth-child(odd) {

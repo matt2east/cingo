@@ -19,11 +19,25 @@ import { Checkbox } from 'react-bootstrap';
 
 
 
-class IncrementComponent extends Component {    
+class IncrementComponent extends Component {   
+    componentDidMount(){
+    }
+    componentDidUpdate(event){
+       if (this.state.bool=true){
+           this.setState({ 
+            message: this.state.message.concat(["dummy data"]),
+            addclass: "arrow_box",
+           bool: false
+            
+        })
+           
+       } 
+    }
 constructor(props) {
     super(props);
     this.state = {message: [""],
                   addclass: null,
+                  bool: false
                   
                  };
    
@@ -32,16 +46,19 @@ constructor(props) {
 }
     handleSubmit(event) {
         var chat = [this.input.value];
-        
-        
         event.preventDefault();
         this.setState({ 
             message: this.state.message.concat(chat),
             addclass: "arrow_box",
+            bool: true
             
         })
-    
-        alert(ReactDOM.findDOMNode(this.formControlRef.value))   
+        var newInput = {}
+        var inputValue = ReactDOM.findDOMNode(this.userEntry).value;
+        if (inputValue.length > 0){
+            ReactDOM.findDOMNode(this.userEntry).value = '';
+            newInput.userEntry = inputValue;
+        }  
 
     };
 
@@ -86,7 +103,7 @@ constructor(props) {
                                  Chat with Cingo
                              </Col>
                              <Col sm={11}>
-                                 <FormControl type="text" ref={(c)=>this.formControlRef=c} placeholder="say something" inputRef={(ref) => {this.input = ref}}>
+                                 <FormControl type="text" ref={ref => this.userEntry = ref} placeholder="say something" inputRef={(ref) => {this.input = ref}}>
                                     
                                
                                 </FormControl>
