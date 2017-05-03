@@ -20,49 +20,41 @@ import { Checkbox } from 'react-bootstrap';
 
 
 class IncrementComponent extends Component {   
-    componentDidMount(){
-    }
-    componentDidUpdate(event){
-       if (this.state.bool=true){
-           this.setState({ 
-            message: this.state.message.concat(["dummy data"]),
-            addclass: "arrow_box",
-           bool: false
-            
-        })
-           
-       } 
-    }
+
 constructor(props) {
     super(props);
-    this.state = {message: [""],
-                  addclass: null,
-                  bool: false
-                  
-                 };
-   
-    
+    this.state = {message: [],                
+                 }; 
     this.handleSubmit = this.handleSubmit.bind(this);
 }
     handleSubmit(event) {
+       
         var chat = [this.input.value];
         event.preventDefault();
-        this.setState({ 
-            message: this.state.message.concat(chat),
-            addclass: "arrow_box",
-            bool: true
-            
+        var testVar = (this.state.message.concat(chat));
+        var newArr = this.state.message.push(testVar);
+        alert(newArr)
+        /* logs number of array entries */
+        this.setState({
+            message: newArr
         })
-        var newInput = {}
+        alert(this.state.message)
+   
+       
+       
+        
+        var newInput = {};
         var inputValue = ReactDOM.findDOMNode(this.userEntry).value;
         if (inputValue.length > 0){
             ReactDOM.findDOMNode(this.userEntry).value = '';
             newInput.userEntry = inputValue;
-        }  
-
+            
+        }
     };
 
   render() {
+      
+  
     return (
         <div>
             <div id="surround">
@@ -82,7 +74,7 @@ constructor(props) {
                   
                     <div className="chatbox">
                        
-                        <div className="arrow_box">yo</div>
+                        {/*8<div className="arrow_box">yo</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
                         <div className="arrow_box">Sure. What is your question?</div>
                         <div className="arrow_box">Why is Cingo so awesome?</div>
@@ -92,7 +84,7 @@ constructor(props) {
                         <div className="arrow_box">This is a reply.</div>
                         <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
-                        <div className={this.state.addclass}>{this.state.message}</div>
+                        <div className={this.state.addclass}>{this.state.message}</div>*/}
                     </div>
                 </Well>
                     
