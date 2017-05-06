@@ -19,6 +19,16 @@ import { Checkbox } from 'react-bootstrap';
 
 
 
+class ChatBubble extends Component {
+    constructor(props){
+        super(props);  
+    }
+    render(){
+        return (
+        <div className={this.state.addclass}>{this.state.message}</div>)
+    }
+}
+
 class IncrementComponent extends Component {   
 
 constructor(props) {
@@ -33,16 +43,10 @@ constructor(props) {
         event.preventDefault();
         var testVar = (this.state.message.concat(chat));
         var newArr = this.state.message.push(testVar);
-        alert(newArr)
-        /* logs number of array entries */
         this.setState({
             message: newArr
         })
-        alert(this.state.message)
-   
-       
-       
-        
+         
         var newInput = {};
         var inputValue = ReactDOM.findDOMNode(this.userEntry).value;
         if (inputValue.length > 0){
@@ -54,7 +58,7 @@ constructor(props) {
 
   render() {
       
-  
+      
     return (
         <div>
             <div id="surround">
@@ -73,8 +77,10 @@ constructor(props) {
                 <Well bsSize="large" id="well">
                   
                     <div className="chatbox">
+                        
                        
-                        {/*8<div className="arrow_box">yo</div>
+                        {/*
+                        <div className="arrow_box">yo</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
                         <div className="arrow_box">Sure. What is your question?</div>
                         <div className="arrow_box">Why is Cingo so awesome?</div>
@@ -85,6 +91,7 @@ constructor(props) {
                         <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
                         <div className={this.state.addclass}>{this.state.message}</div>*/}
+                        <ChatBubble />
                     </div>
                 </Well>
                     
