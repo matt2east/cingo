@@ -1,7 +1,11 @@
 function myFunction() {
     var x = event.keyCode;
-    if (x == 13) {
-        alert ("You pressed the enter key!");
+    var inputvalue = document.getElementById("inputchat").value;
+    if (x == 13 && inputvalue != "") {
+        alert(inputvalue)
     } 
 
 }
+
+
+
