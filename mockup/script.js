@@ -1,25 +1,29 @@
+var arr = []
+
 function addChat() {
     var keysend = event.keyCode;
     var inputvalue = document.getElementById("inputchat").value;
-//    var newtext = document.createTextNode(inputvalue);
-    var node = document.createElement("div");
-    var textnode = document.createTextNode(inputvalue);
+    
     
     if (keysend == 13 && inputvalue != "") {
-//    console.log(inputvalue)
-    node.appendChild(textnode);
-    document.getElementById("newchat").appendChild(node);
-    var d = document.getElementById("newchat");
-        d.className += " arrow_box";    
-    document.getElementById("inputchat").value = "";  
-    
+        arr.push(inputvalue);
+        var addArr = arr;
 
-      
-    
+        addArr = addArr.map(function(e) {return '#' + e})
+        alert("array items are " + addArr);
         
+// for each item in addArr create a styled div with the message
+
+        var newmessage = document.createElement("div");
+        var newmessagetext = document.createTextNode(inputvalue);
+        newmessage.appendChild(newmessagetext);
+        document.getElementById("newchat").appendChild(newmessage);
+        var styling = document.getElementById("newchat");
+        styling.className += " arrow_box";    
+//    document.getElementById("inputchat").value = "";
+        document.getElementById("myform").reset();    
+         
     } 
+    
 
 }
-
-
-
