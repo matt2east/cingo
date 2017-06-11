@@ -10,18 +10,21 @@ function addChat() {
         var addArr = arr;
 
         addArr = addArr.map(function(e) {
-            return '#' + e})
-        //change this
-        alert("array items are " + addArr);
+            return '<div class="arrow_box">' + e + '</div>'})
+//        alert("array items are " + addArr);
+        for (var i in addArr) {
+
+}
         
 // for each item in addArr create a styled div with the message
 
-        var newmessage = document.createElement("div");
-        var messagetext = document.createTextNode(addArr);
-        newmessage.appendChild(messagetext);
-        document.getElementById("newchat").appendChild(newmessage);
-        var styling = document.getElementById("newchat");
-        styling.className += " arrow_box";    
+//        var newmessage = document.createElement("div");
+//        var messagetext = document.createTextNode(addArr[i]);
+//        newmessage.appendChild(messagetext);
+        var div = document.getElementById("newchat");
+        div.innerHTML = div.innerHTML + (addArr[i])
+//        var styling = document.getElementById("newchat");
+//        styling.className += " arrow_box";    
 //    document.getElementById("inputchat").value = "";
         document.getElementById("myform").reset();    
          
@@ -29,3 +32,7 @@ function addChat() {
     
 
 }
+
+var div = document.getElementById('divID');
+
+div.innerHTML = div.innerHTML + 'Extra stuff';
