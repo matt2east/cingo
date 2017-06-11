@@ -9,14 +9,16 @@ function addChat() {
         arr.push(inputvalue);
         var addArr = arr;
 
-        addArr = addArr.map(function(e) {return '#' + e})
+        addArr = addArr.map(function(e) {
+            return '#' + e})
+        //change this
         alert("array items are " + addArr);
         
 // for each item in addArr create a styled div with the message
 
         var newmessage = document.createElement("div");
-        var newmessagetext = document.createTextNode(inputvalue);
-        newmessage.appendChild(newmessagetext);
+        var messagetext = document.createTextNode(addArr);
+        newmessage.appendChild(messagetext);
         document.getElementById("newchat").appendChild(newmessage);
         var styling = document.getElementById("newchat");
         styling.className += " arrow_box";    
