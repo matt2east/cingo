@@ -13,8 +13,8 @@ function addChat() {
             return '<div class="arrow_box">' + e + '</div>'})
 //        alert("array items are " + addArr);
         for (var i in addArr) {
-
-}
+            
+        }
         
 // for each item in addArr create a styled div with the message
 

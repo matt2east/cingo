@@ -6,9 +6,13 @@ body{
     height: 2em;
     width: 5em;
     padding-bottom:5px;
+/*    background-color: red;*/
 }
 .navbar {
     margin-bottom: 0 !important;
+}
+.navbar-brand, .navbar-nav>li>a:hover {
+    background-color: #b2ffe5;
 }
 .navbar-custom {
     color: white;
