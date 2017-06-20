@@ -19,15 +19,6 @@ import { Checkbox } from 'react-bootstrap';
 
 
 
-class ChatBubble extends Component {
-    constructor(props){
-        super(props);  
-    }
-    render(){
-        return (
-        <div className={this.state.addclass}>{this.state.message}</div>)
-    }
-}
 
 class IncrementComponent extends Component {   
 
@@ -63,15 +54,7 @@ constructor(props) {
         <div>
             <div id="surround">
                 <div className="infobar">
-                    <span className="inforight">icon</span>
-                    <span className="moreright">swag</span>
-                    <span className="infoleft">info</span>
-                    <span className="moreleft">test</span>
-                    <br></br>
-                    <span className="inforight">icon</span>
-                    <span className="moreright">swag</span>
-                    <span className="infoleft">info</span>
-                    <span className="moreleft">test</span>
+            
                 </div>
                 
                 <Well bsSize="large" id="well">
@@ -79,7 +62,7 @@ constructor(props) {
                     <div className="chatbox">
                         
                        
-                        {/*
+                   
                         <div className="arrow_box">yo</div>
                         <div className="arrow_box">I have a question about Cingo.</div>
                         <div className="arrow_box">Sure. What is your question?</div>
@@ -90,8 +73,8 @@ constructor(props) {
                         <div className="arrow_box">This is a reply.</div>
                         <div className="arrow_box">This is a chat message.</div>
                         <div className="arrow_box">This is a reply.</div>
-                        <div className={this.state.addclass}>{this.state.message}</div>*/}
-                        <ChatBubble />
+                        <div className={this.state.addclass}>{this.state.message}</div>
+                     
                     </div>
                 </Well>
                     
@@ -102,7 +85,7 @@ constructor(props) {
                                  Chat with Cingo
                              </Col>
                              <Col sm={11}>
-                                 <FormControl type="text" ref={ref => this.userEntry = ref} placeholder="say something" inputRef={(ref) => {this.input = ref}}>
+                                 <FormControl type="text" ref={ref => this.userEntry = ref} placeholder="Enter Note" inputRef={(ref) => {this.input = ref}}>
                                     
                                
                                 </FormControl>
